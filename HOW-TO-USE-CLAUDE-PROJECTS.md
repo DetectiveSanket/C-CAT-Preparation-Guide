@@ -1,101 +1,72 @@
-# 🤖 How to Use Claude Projects
+Open the file `HOW-TO-USE-CLAUDE-PROJECTS.md` in the root of the 
+`C-CAT Preparation Guide` folder.
 
-> Claude Projects are persistent AI workspaces. You configure them once with a
-> teaching prompt — and Claude remembers it across every session.
-> This is the foundation of the entire preparation system in this repo.
 
 ---
 
-## 🆚 Project vs Regular Chat
+# 🤖 How to Use Claude Projects — Complete Guide
 
-| Feature | 💬 Regular Chat | 📁 Claude Project |
-|---------|:--------------:|:----------------:|
-| Custom teaching instructions | ❌ | ✅ Saved permanently |
-| Upload revision PDFs | Per chat only | ✅ Available always |
-| Remembers past sessions | ❌ Resets | ✅ Persists |
-| Best for | Quick questions | Structured study |
+> This single file explains everything: what Claude Projects are, how to set up
+> a learning project for any subject, and how to use the global MCQ practice project.
+> Read this once. Then you are ready to use the entire repository.
 
 ---
 
-## 🛠️ Create a Claude Project (Step-by-Step)
+## 📌 What Is a Claude Project?
 
-### Step 1 — Open Claude.ai
-Go to [https://claude.ai](https://claude.ai). Sign in or create a free account.
+A Claude Project is a persistent AI workspace on [claude.ai](https://claude.ai) where:
 
-> 💡 **Recommendation:** Claude Pro (paid) gives higher message limits —
-> important for long study sessions. Free tier works but may hit limits mid-session.
-> Use **Claude Sonnet 4.5 or higher** for best results.
+| Feature | What It Means for You |
+|---------|----------------------|
+| ✅ Custom instructions saved permanently | Claude behaves as a teacher every session — no re-explaining needed |
+| ✅ Conversation history persists | Pick up exactly where you left off |
+| ✅ No repeated setup | Configure once, study forever |
 
-### Step 2 — Create a New Project
-1. In the left sidebar, click **"Projects"**
-2. Click **"+ New Project"**
-3. Name it clearly — e.g., `C-CAT: C Language` or `C-CAT: MCQ Practice`
-4. Click **"Create Project"**
-
-### Step 3 — Add Custom Instructions
-1. Inside the project, click **"Project Instructions"** (gear/settings icon)
-2. You will see a large text box
-3. Open the relevant `[Subject]-Project-Instructions.md` from this repo
-4. Copy the full prompt block (marked `--- BEGIN PROMPT ---` to `--- END PROMPT ---`)
-5. Paste it into the Custom Instructions box
-6. Click **Save**
-
-> ⚠️ This step is the most important. The custom instructions define how Claude
-> behaves — as a teacher, not just a chatbot. Do not skip it.
-
-### Step 4 — Upload the Revision PDF
-1. Inside the project, click **"Add content"** or the upload/paperclip icon
-2. Upload the revision PDF from the `C - CAT/Section B/` folder
-3. Once uploaded, Claude references it in every conversation automatically
-
-### Step 5 — Start a Session
-Open a **New Chat** inside the project and use the trigger format shown in
-the subject's `Project-Instructions.md` file.
+> 💡 Free account works. **Claude Pro recommended** for uninterrupted long sessions.
+> Use **Claude Sonnet 4.5 or higher**.
 
 ---
 
-## 📋 Recommended Project Setup
+## 🛠️ Part 1 — Setting Up a Learning Project (Per Subject)
 
-| 📁 Project Name | 📄 Instructions File | 📎 PDF to Upload |
-|----------------|---------------------|-----------------|
-| `C-CAT: English` | `Section A/1 - English/English-Project-Instructions.md` | None |
-| `C-CAT: Quantitative Aptitude` | `Section A/2 - Quantitative Aptitude/Quantitative-Aptitude-Project-Instructions.md` | `Quant LRDI ECE Sample.pdf` |
-| `C-CAT: Reasoning` | `Section A/3 - Reasoning/Reasoning-Project-Instructions.md` | `Blood_Relations_Marathi_Glossary.pdf` |
-| `C-CAT: C Language` | `Section B/C Language/C-Language-Project-Instructions.md` | `CCAT_C_Revision (3).pdf` |
-| `C-CAT: DSA` | `Section B/DSA/DSA-Project-Instructions.md` | `DSA_Revision_Bible_CCAT.pdf` |
-| `C-CAT: OS` | `Section B/OS/OS-Project-Instructions.md` | `OS_Revision_Notes_CCAT_v2.pdf` |
-| `C-CAT: Networking` | `Section B/Networking/Networking-Project-Instructions.md` | `Networking_Revision_CCA T_SectionB.pdf` |
-| `C-CAT: Big Data` | `Section B/Big Data/BigData-Project-Instructions.md` | `BigData_Revision_Sheet_v2.pdf` |
-| `C-CAT: AI` | `Section B/AI/AI-Project-Instructions.md` | `AI_Revision_CCAT.pdf` |
-| `C-CAT: MCQ Practice` | `MCQ-Project-Setup.md` | None |
+Do this once for each subject you want to study.
 
----
+### Step 1 — Create the Project
+1. Go to [https://claude.ai](https://claude.ai) → click **Projects** in the left sidebar
+2. Click **+ New Project**
+3. Name it clearly: e.g. `C-CAT: C Language` or `C-CAT: Operating Systems`
+4. Click **Create Project**
 
-## 💬 How to Talk to Claude in a Learning Project
+### Step 2 — Paste the Custom Instructions
+1. Inside the project, click the **gear icon** or **"Project Instructions"**
+2. Open the subject folder in this repo (e.g. `Section B/C Language/`)
+3. Open `C-Language-Project-Instructions.md`
+4. Copy everything between `--- BEGIN PROMPT ---` and `--- END PROMPT ---`
+5. Paste it into the Custom Instructions box → click **Save**
+
+> ⚠️ This is the most important step. The prompt turns Claude from a chatbot
+> into a structured teacher that cross-questions you and identifies your gaps.
+
+### Step 3 — Start a Session
+Open a **New Chat** inside the project and use the trigger format from that subject's
+instructions file. Examples:
+
+| Subject | Example Trigger |
+|---------|----------------|
+| C Language | `Teach me: Pointers — pointer arithmetic with arrays` |
+| DSA | `Teach me: Binary Search Tree — insertion and deletion` |
+| OS | `Teach me: Round Robin scheduling — trace with 3 processes` |
+| Networking | `Teach me: OSI Model — layer by layer with protocols` |
+| Big Data | `Teach me: MapReduce — explain with a word count example` |
+| AI | `Teach me: A* Search — with a traced example` |
 
 **Be specific. Claude responds to specifics, not generalities.**
 
-| ❌ Too vague | ✅ Effective trigger |
-|-------------|---------------------|
+| ❌ Too vague | ✅ Effective |
+|-------------|------------|
 | `Teach me C` | `Teach me: Pointers — pointer arithmetic with arrays` |
-| `I don't understand this` | `I understand malloc but not free — explain only that` |
-| `Give me examples` | `Give me 3 correct examples and 2 that break the rule` |
-| `Explain OS` | `Teach me: Round Robin scheduling — trace with 3 processes` |
+| `I don't understand` | `I understand malloc but not free — explain only that part` |
+| `Give me examples` | `Give me 3 correct examples and 2 that intentionally break the rule` |
 
----
-
-## 🔧 Troubleshooting
-
-**Claude is not following the teaching style.**
-→ Open Project Settings and verify custom instructions are saved. Re-paste if empty.
-
-**Claude says it cannot see my PDF.**
-→ Re-upload inside the project under "Project Knowledge" — not in a regular chat.
-
-**I hit the message limit.**
-→ Free tier has daily limits. Wait for reset or upgrade to Pro.
-→ Do not switch to regular chat — you will lose the project context.
-
-**Claude gives a wrong answer.**
-→ Cross-question it: *"Are you sure? Explain your reasoning."*
-→ The project prompts are designed so Claude admits uncertainty — use that.
+### Step 4 — Generate Your Revision PDF
+After completing all chapters in a subject, ask Claude at the end of your session:
