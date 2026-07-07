@@ -1,7 +1,4 @@
-Open the file `README.md` in the root of the `C-CAT Preparation Guide` folder.
-Replace its entire content with exactly the following. Do not add or remove anything:
 
----
 
 # 📘 C-CAT Preparation Guide
 
